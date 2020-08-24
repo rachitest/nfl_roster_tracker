@@ -10,18 +10,8 @@ class Team:
         url = self.site + "team/players-roster"
         df = pd.read_html(url)
         
-        active = df[0]
-        active_pup = df[1]
-        reserve_pup = df[2]
-        reserve_retired = df[3]
-        exempt = df[4]
-        
-        roster = {"Active":active,
-                "Active/PUP":active_pup,
-                "Reserve/PUP":reserve_pup,
-                "Reserve/Retired":reserve_retired,
-                "Exempt":exempt
-                }
+        roster = pd.concat(df)
+        roster = roster.reset_index(drop=True)
 
         return roster
 
@@ -36,8 +26,8 @@ CLE = Team("Cleveland Browns", "CLE", "https://www.clevelandbrowns.com/")
 DAL = Team("Dallas Cowboys", "DAL", "https://www.dallascowboys.com/")
 DEN = Team("Denver Broncos", "DEN", "https://www.denverbroncos.com/")
 DET = Team("Detroit Lions", "DET", "https://www.detroitlions.com/")
-GB = Team("Green Bay Packers", "GB", "https://www.houstontexans.com/")
-HOU = Team("Houston Texans", "HOU", "https://www.packers.com/")
+GB = Team("Green Bay Packers", "GB", "https://www.packers.com/")
+HOU = Team("Houston Texans", "HOU", "https://www.houstontexans.com/")
 IND = Team("Indianapolis Colts", "IND", "https://www.colts.com/")
 JAX = Team("Jacksonville Jaguars", "JAX", "https://www.jaguars.com/")
 KC = Team("Kansas City Chiefs", "KC", "https://www.chiefs.com/")
