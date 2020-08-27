@@ -35,7 +35,7 @@ def excel_out(league_roster):
 
 
 def sqlite_out(league_roster):
-    engine = sql.create_engine('sqlite:///NFL_roster.db', echo=False)
+    engine = sql.create_engine('sqlite:///NFL_rosters.db', echo=False)
 
     for key, value in league_roster.items():
         value.to_sql(key, con=engine, if_exists='replace')
