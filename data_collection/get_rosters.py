@@ -79,5 +79,5 @@ if __name__ == '__main__':
     teams = [ARI, ATL, BAL, BUF, CAR, CHI, CIN, CLE, DAL, DEN, DET, GB, HOU, IND, JAX, KC, LAC, LAR, LV, MIA, MIN, NE, NO, NYG, NYJ, PHI, PIT, SEA, SF, TB, TEN, WAS]
 
     league_roster = roster_dict(teams)
-    excel_out(league_roster)
+    
     sqlite_out(league_roster)
