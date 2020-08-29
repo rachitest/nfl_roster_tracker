@@ -1,8 +1,6 @@
-Set-Location "G:\My Drive\Backup\Documents\Python Projects\nfl_roster_tracker"
+Set-Location "G:\My Drive\Backup\Documents\Python Projects\nfl_roster_tracker\data_collection"
 
 poetry shell
-
-Set-Location "data_collection"
 
 python get_rosters.py
 
