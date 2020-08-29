@@ -74,7 +74,7 @@ if __name__ == '__main__':
     SF = Team("San Francisco 49ers", "SF", "https://www.49ers.com/")
     TB = Team("Tampa Bay Buccaneers", "TB", "https://www.buccaneers.com/")
     TEN = Team("Tennessee Titans", "TEN", "https://www.titansonline.com/")
-    WAS = Team ("Washington Football Team", "WAS", "https://www.redskins.com/")
+    WAS = Team ("Washington Football Team", "WAS", "https://www.washingtonfootball.com/")
     
     teams = [ARI, ATL, BAL, BUF, CAR, CHI, CIN, CLE, DAL, DEN, DET, GB, HOU, IND, JAX, KC, LAC, LAR, LV, MIA, MIN, NE, NO, NYG, NYJ, PHI, PIT, SEA, SF, TB, TEN, WAS]
 
